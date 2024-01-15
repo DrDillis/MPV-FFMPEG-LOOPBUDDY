@@ -37,6 +37,8 @@ if you end up outside of the a-b loop range from adjusting the time this will br
 KNOWN ISSUES
 1 loops too short will not export properly (1-2 seconds)
 2 some exports might have no video adjust the ffmpeg prompt input output / codec to your liking in ffmegExportandshow.lua ...
+        sometimes this can be fixed by adjusting the time a little forward and backwards
+
 
 
 LINE 42: local ffmpeg_command = string.format('ffmpeg -i "%s" -ss %.2f -to %.2f -c:v copy -c:a copy "%s"', input_file, start_time, end_time, output_file_path)
