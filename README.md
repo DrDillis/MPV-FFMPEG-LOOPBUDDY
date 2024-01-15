@@ -14,14 +14,23 @@ Drag these 3 scripts into \AppData\Roaming\mpv\scripts
 
 
 ffmpegExportandshow.lua
+---
 1 Make the directory and or change the line of code in this script for C:\Users\Computer\Videos\dump
 2 Use your normal a-b loop l / L key, use f5 to show the current a-b loop time, press F6 to export from ffmpeg to mp4
 3 exported video will have the title + 4 random digits at the end to prevent overwriting / ffmpeg warning prompts
+---------------------
+
+
 
 adjustab.lua
+---
+
 use CTRL + [] and ALT + [] to add or reduce time to the A-B loop, each key press will  remove or add time to the loop
+---------------------
+
 
 gobackf4.lua
+---
 if you end up outside of the a-b loop range from adjusting the time this will bring you back to the loop range
 
 
