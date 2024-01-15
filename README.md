@@ -1,14 +1,16 @@
 # MPV-FFMPEG-LOOPBUDDY
-3 scripts that'll knock your socks off. 🧦💥🦶
+
+EXPORT A-B LOOP FROM MPV WITH FFMPEG IN SECONDS, MAKE A TON OF CLIPS FROM A VIDEO WITH EASE! 🔮🎅👩‍🚒👨‍🚒🎆🎇🔥🔥🔥🚒
+3 scripts that'll knock your socks off! 🧦💥🦶
 
 1) Export A-B loop to MP4 2) Adjust loop time 3) Move back to loop if outside range
 
-
+REQUIREMENTS
+----------------
 USER MUST HAVE FFMPEG INSTALLED WITH PATH SET
 
+
 Drag these 3 scripts into \AppData\Roaming\mpv\scripts
-
-
 
 
 ffmpegExportandshow.lua
