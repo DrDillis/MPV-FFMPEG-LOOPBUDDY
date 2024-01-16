@@ -23,6 +23,9 @@ function format_time(time)
     return string.format("%02d:%02d:%02d", hours, mins, secs)
 end
 
+-- Adding a seed for the random generator to enhance randomness
+math.randomseed(os.time())
+
 -- Generate a video clip using ffmpeg from the current A-B loop with a unique filename
 function generate_video_clip()
     local start_time = mp.get_property_number("ab-loop-a")
@@ -39,7 +42,8 @@ function generate_video_clip()
         -- Ensure the output directory exists
         utils.subprocess({args = {"mkdir", output_dir}, cancellable = false})
 
-        local ffmpeg_command = string.format('ffmpeg -i "%s" -ss %.2f -to %.2f -c:v copy -c:a copy "%s"', input_file, start_time, end_time, output_file_path)
+        -- Using the libx264 codec to help prevent black video output issue
+        local ffmpeg_command = string.format('ffmpeg -i "%s" -ss %.2f -to %.2f -c:v libx264 -c:a copy "%s"', input_file, start_time, end_time, output_file_path)
         os.execute(ffmpeg_command)
 
         mp.osd_message("Video clip generated: " .. output_file_path, 2)  -- Display the message for 2 seconds
